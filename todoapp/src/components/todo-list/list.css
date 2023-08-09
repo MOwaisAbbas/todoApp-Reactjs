@@ -1,0 +1,48 @@
+ul{
+    list-style-type: none;
+    width: 405px;
+    height: 380px;
+    margin:  0 auto;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+ul::-webkit-scrollbar{
+    display: none;
+}
+ul li{
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    width: 98%;
+    height: 60px;
+    box-shadow: #0000007e 0px 1px 4px;
+    margin: 15px auto;
+}
+li button{
+    padding: 5px;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+li button:active{
+    opacity: .8;
+}
+.dltBtn {
+    background-color: #e74d3d;
+}
+.editBtn {
+    background-color: #4ad049;
+}
+li button img{
+    width: 30px;
+    height: 30px;
+    filter: invert(100%);
+}
+li span{
+    overflow: hidden;
+    width: 260px;
+    font-size: 20px;
+}
