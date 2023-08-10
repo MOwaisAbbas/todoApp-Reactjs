@@ -1,6 +1,7 @@
 ul{
     list-style-type: none;
     width: 405px;
+    width: 90%;
     height: 380px;
     margin:  0 auto;
     overflow-y: scroll;
