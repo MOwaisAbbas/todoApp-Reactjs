@@ -1,7 +1,9 @@
 import './footer.css'
-const Footer = () => {
+const Footer = (props) => {
 return <div className='footer'>
-    <button>Clear All</button>
+    <button onClick={()=>{
+        props.clrAll()
+    }}>Clear All</button>
 </div>
 }
 export default Footer

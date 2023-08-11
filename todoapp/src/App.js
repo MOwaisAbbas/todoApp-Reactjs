@@ -7,12 +7,17 @@ function App() {
 
   const [inpVal, setInpVal] = useState('')
   const [todos, setTodo] = useState([])
-const editTodo = (arr)=>{
-  console.log(todos)
-  setTodo(arr)
-  console.log(arr)
-  console.log(todos)
-}
+  const dltTodo = (arr) => {
+    setTodo([...arr])
+  }
+  const clrAll = () => {
+    setTodo([])
+  }
+  const editTodo = (i) => {
+
+    setInpVal(todos[i])
+    console.log(i)
+  }
 
   return (
     <div className="App">
@@ -26,13 +31,16 @@ const editTodo = (arr)=>{
 
           }} name='todo-input' id='todo-input' />
           <button onClick={() => {
-            setTodo([inpVal ,...todos])
-            setInpVal("")
+            if (inpVal.trim() !== '') {
+
+              setTodo([inpVal, ...todos])
+              setInpVal("")
+            }
           }}><img src={addImg} alt='add' />
           </button>
         </div>
-        <List value={todos} again={editTodo} />
-        <Footer />
+        <List value={todos} dlttodo={dltTodo} edittodo={editTodo} />
+        <Footer clrAll={clrAll} />
       </div>
     </div>
   );
