@@ -15,11 +15,17 @@ ul li{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 20px;
+    padding: 10px 15px;
     width: 98%;
     height: 60px;
     box-shadow: #0000007e 0px 1px 4px;
     margin: 15px auto;
+}
+li div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 30%;
 }
 li button{
     padding: 5px;
@@ -27,6 +33,7 @@ li button{
     outline: none;
     border-radius: 50%;
     cursor: pointer;
+    margin: 3px;
 }
 li button:active{
     opacity: .8;
@@ -43,7 +50,8 @@ li button img{
     filter: invert(100%);
 }
 li span{
+
     overflow: hidden;
-    width: 260px;
+    width: 70%;
     font-size: 20px;
 }

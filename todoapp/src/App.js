@@ -7,17 +7,22 @@ function App() {
 
   const [inpVal, setInpVal] = useState('')
   const [todos, setTodo] = useState([])
+  const [bool, setbool] = useState(true)
+  const [index, setindex] = useState("")
   const dltTodo = (arr) => {
     setTodo([...arr])
   }
   const clrAll = () => {
     setTodo([])
   }
-  const editTodo = (i) => {
 
-    setInpVal(todos[i])
-    console.log(i)
+  const edit = (i, v) => {
+    setInpVal(v)
+    setindex(i)
+    setbool(false)
+
   }
+
 
   return (
     <div className="App">
@@ -30,16 +35,29 @@ function App() {
             setInpVal(e.target.value)
 
           }} name='todo-input' id='todo-input' />
-          <button onClick={() => {
-            if (inpVal.trim() !== '') {
 
+          {bool ? <button onClick={() => {
+
+            if (inpVal.trim() !== '') {
               setTodo([inpVal, ...todos])
               setInpVal("")
             }
+
           }}><img src={addImg} alt='add' />
-          </button>
+          </button> : <button onClick={(edt) => {
+
+            if (inpVal.trim() !== '') {
+
+              todos.splice(index, 1, inpVal)
+              setTodo([...todos])
+              setInpVal("")
+              setbool(true)
+            }
+
+          }}><img src={addImg} alt='add' />
+          </button>}
         </div>
-        <List value={todos} dlttodo={dltTodo} edittodo={editTodo} />
+        <List value={todos} dlttodo={dltTodo} editTodo={edit} />
         <Footer clrAll={clrAll} />
       </div>
     </div>

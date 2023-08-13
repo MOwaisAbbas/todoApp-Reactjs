@@ -14,7 +14,7 @@
     background: linear-gradient(0deg, rgba(71, 121, 223, 1) 0%, rgba(104, 231, 206, 1) 100%);
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; 
 }
 
 .main-div {
@@ -23,11 +23,9 @@
     height: 620px;
     box-shadow: #0000007e 0px 1px 8px;
     border-radius: 15px;
+
 }
 
-/* .main-div div{
-    background-color: pink;
-}  */
 .main-div h1 {
     margin: 0 auto;
     height: 70px;
@@ -87,7 +85,7 @@
 
     .main-div {
         background-color: #f0f0f0;
-        width: 420px;
+        width: 50vh;
         height: 620px;
         box-shadow: #0000007e 0px 1px 8px;
         border-radius: 15px;

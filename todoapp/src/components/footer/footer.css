@@ -1,7 +1,7 @@
 .footer{
     margin: 0 auto;
 
-    width: 400px;
+    width: 100%;
     height: 80px;
     display: flex;
     justify-content: center;
@@ -10,7 +10,7 @@
 }
 .footer button {
     background-color: #8e49e9;
-    width: 100%;
+    width: 90%;
     height: 50px;
     border-radius: 50px;
     border: none;
